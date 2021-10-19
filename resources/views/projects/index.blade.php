@@ -12,4 +12,6 @@
             <div>No projects yet</div>
         @endforelse
     </main>
+    <modal name="example">This is an example</modal>
+    <a href="" @click.prevent="$modal.show('example')">Click</a>
 @endsection

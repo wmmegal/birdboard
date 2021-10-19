@@ -6,7 +6,8 @@ use App\Models\Project;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ProjectFactory extends Factory {
+class ProjectFactory extends Factory
+{
     /**
      * The name of the factory's corresponding model.
      *
@@ -19,11 +20,13 @@ class ProjectFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
+    public function definition()
+    {
         return [
-            'title'       => $this->faker->sentence(),
+            'title' => $this->faker->sentence(),
             'description' => $this->faker->paragraph(),
-            'owner_id'    => function () {
+            'notes' => 'Foobar text',
+            'owner_id' => function () {
                 return User::factory();
             }
         ];
